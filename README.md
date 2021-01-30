@@ -9,6 +9,10 @@ Time to automate the tedious away.
 Copycheck will search for substrings of given length in a larger text dataset for you.
 Use this to validate uniqueness before saving generated text, and you'll save yourself a huge headache.
 
+```sh
+pip install https://github.com/spacerockzero/copycheck/archive/master.zip
+```
+
 ```python
 import copycheck
 
@@ -18,6 +22,7 @@ duplicates = copycheck(
               min=5, 
               max=10, 
               text=my_gen_text, 
-              dataset=my_dataset
+              dataset=my_dataset,
+              verbose=False
             )
 ```
