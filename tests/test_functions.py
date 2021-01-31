@@ -31,11 +31,11 @@ def test_unique():
 
 
 def test_series6():
-    copycheck_found(mocks.duplicate_series6, mocks.duplicate_series6_common, dataset)
+    dupecheck_found(mocks.duplicate_series6, mocks.duplicate_series6_common, dataset)
 
 
-def copycheck_found(text, expected, data):
-    duplicates = chunks.copycheck(min=3, max=12, text=text, dataset=data, verbose=True)
+def dupecheck_found(text, expected, data):
+    duplicates = chunks.dupecheck(min=3, max=12, text=text, dataset=data, verbose=True)
     assert len(duplicates) > 0
     # assert duplicates[0] == text
 
@@ -69,25 +69,25 @@ def test_sw_run_series6():
     )
 
 
-def sw_copycheck(min, text, expected, data):
-    duplicates = sliding_window.copycheck(
+def sw_dupecheck(min, text, expected, data):
+    duplicates = sliding_window.dupecheck(
         min=min, max=12, text=text, dataset=data, verbose=True
     )
     assert len(duplicates) > 0
     assert expected in duplicates
 
 
-def test_sw_copycheck_series3():
-    sw_copycheck(3, mocks.duplicate_series3, mocks.duplicate_series3_common, dataset)
+def test_sw_dupecheck_series3():
+    sw_dupecheck(3, mocks.duplicate_series3, mocks.duplicate_series3_common, dataset)
 
 
-def test_sw_copycheck_series4():
-    sw_copycheck(4, mocks.duplicate_series4, mocks.duplicate_series4_common, dataset)
+def test_sw_dupecheck_series4():
+    sw_dupecheck(4, mocks.duplicate_series4, mocks.duplicate_series4_common, dataset)
 
 
-def test_sw_copycheck_series5():
-    sw_copycheck(5, mocks.duplicate_series5, mocks.duplicate_series5_common, dataset)
+def test_sw_dupecheck_series5():
+    sw_dupecheck(5, mocks.duplicate_series5, mocks.duplicate_series5_common, dataset)
 
 
-def test_sw_copycheck_series6():
-    sw_copycheck(6, mocks.duplicate_series6, mocks.duplicate_series6_common, dataset)
+def test_sw_dupecheck_series6():
+    sw_dupecheck(6, mocks.duplicate_series6, mocks.duplicate_series6_common, dataset)

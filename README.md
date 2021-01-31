@@ -1,4 +1,4 @@
-# Copycheck
+# Dupecheck
 
 Use this to prevent ["Thomas Riker" situations](https://memory-alpha.fandom.com/wiki/Thomas_Riker), when generating text with machine learning systems.
 
@@ -6,21 +6,21 @@ At [Eclectic Beams](https://eclecticbeams.com/), when generating stories from fi
 
 Time to automate the tedious away.
 
-Copycheck will search for substrings of given length in a larger text dataset for you.
+Dupecheck will search for substrings of given length in a larger text dataset for you.
 Use this to validate uniqueness before saving generated text, and you'll save yourself a huge headache.
 
 It compares word series without punctuation.
 
 ```sh
-pip install https://github.com/spacerockzero/copycheck/archive/master.zip
+pip install https://github.com/spacerockzero/dupecheck/archive/v0.5.3.zip
 ```
 
 ```python
-import sliding_window, chunks from copycheck
+import sliding_window from dupecheck
 
 ...
 # find word series at least 5 words long of your text string in dataset string
-duplicates = sliding_window.copycheck(
+duplicates = sliding_window.dupecheck(
               min=5, 
               max=10, 
               text=my_gen_text, 

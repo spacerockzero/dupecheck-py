@@ -1,5 +1,5 @@
 import os
-from lib.sliding_window import copycheck
+from lib.sliding_window import dupecheck
 
 datasetName = "adult_fiction"
 # datasetName = "aynrand-anthem"
@@ -86,7 +86,7 @@ with open(filepath, "r") as fin:
     dataset = fin.read()
     print("got dataset!")
 
-    duplicates = copycheck(min=5, max=6, text=text, dataset=dataset)
+    duplicates = dupecheck(min=5, max=6, text=text, dataset=dataset)
     print("duplicates:********************************\n\n")
     for dupe in duplicates:
         print(dupe, "\n")

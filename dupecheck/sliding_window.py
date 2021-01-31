@@ -44,7 +44,7 @@ def run(window_length, text, dataset):
     return results
 
 
-def copycheck(min=DEFAULT_MIN, max=DEFAULT_MAX, text=None, dataset=None, verbose=False):
+def dupecheck(min=DEFAULT_MIN, max=DEFAULT_MAX, text=None, dataset=None, verbose=False):
     assert text != None
     assert dataset != None
     min = min - 1
