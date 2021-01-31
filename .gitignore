@@ -1,6 +1,6 @@
 .vscode
 .pytest_cache
-__pycache__
+__pycache__/
 copycheck.egg-info/
 .eggs
 # dist/
