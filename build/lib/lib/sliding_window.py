@@ -3,6 +3,7 @@
 # crosses the border between chunks
 import os
 import re
+from tqdm import trange, tqdm
 
 DEFAULT_MIN = 5
 DEFAULT_MAX = 10
@@ -23,10 +24,11 @@ def compare(text, data):
 
 
 def run(window_length, text, dataset):
+    print("window: " + str(window_length))
     dataset = clean_string(dataset)
     results = []
     text_words = text.split()
-    for num, t_word in enumerate(text_words):
+    for num, t_word in tqdm(iterable=enumerate(text_words), total=len(text_words)):
         window_indexes = list(range(num, num + window_length))
         window_words = ""
         for i in window_indexes:
