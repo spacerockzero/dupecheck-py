@@ -9,20 +9,21 @@ Time to automate the tedious away.
 Copycheck will search for substrings of given length in a larger text dataset for you.
 Use this to validate uniqueness before saving generated text, and you'll save yourself a huge headache.
 
+It compares word series without punctuation.
+
 ```sh
 pip install https://github.com/spacerockzero/copycheck/archive/master.zip
 ```
 
 ```python
-import copycheck
+import sliding_window, chunks from copycheck
 
 ...
 # find word series at least 5 words long of your text string in dataset string
-duplicates = copycheck(
+duplicates = sliding_window.copycheck(
               min=5, 
               max=10, 
               text=my_gen_text, 
               dataset=my_dataset,
-              verbose=False
             )
 ```
