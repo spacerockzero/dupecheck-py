@@ -1,0 +1,12 @@
+README.md
+setup.py
+copycheck.egg-info/PKG-INFO
+copycheck.egg-info/SOURCES.txt
+copycheck.egg-info/dependency_links.txt
+copycheck.egg-info/top_level.txt
+lib/__init__.py
+lib/chunks.py
+lib/sliding_window.py
+tests/__init__.py
+tests/generated.py
+tests/test_functions.py

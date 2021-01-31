@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: copycheck
+Version: 0.4.0
+Summary: Check for duplicate word series between generated text and a dataset
+Home-page: UNKNOWN
+Author: Jakob Anderson
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
