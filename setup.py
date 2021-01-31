@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="copycheck",
-    packages=find_packages(),
+    packages=find_packages(exclude=["tests"]),
     version="0.2.0",
     description="Check for duplicate word series between generated text and a dataset",
     author="Jakob Anderson",
