@@ -9,13 +9,13 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="dupecheck",
-    version="0.6.3",
+    version="0.6.4",
     long_description=README,
     long_description_content_type="text/markdown",
     author="Jakob Anderson",
     author_email="fictionisfiction@gmail.com",
     license="MIT",
-    url="https://github.com/spacerockzero/dupecheck",
+    url="https://github.com/spacerockzero/dupecheck-py",
     description="Check for duplicate word series between generated text and a dataset",
     packages=find_packages(exclude=["tests"]),
     include_package_data=True,
