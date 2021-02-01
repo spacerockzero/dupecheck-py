@@ -9,10 +9,11 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="dupecheck",
-    version="0.6.2",
+    version="0.6.3",
     long_description=README,
     long_description_content_type="text/markdown",
     author="Jakob Anderson",
+    author_email="fictionisfiction@gmail.com",
     license="MIT",
     url="https://github.com/spacerockzero/dupecheck",
     description="Check for duplicate word series between generated text and a dataset",

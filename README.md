@@ -12,7 +12,7 @@ Use this to validate uniqueness before saving generated text, and you'll save yo
 It compares word series without punctuation.
 
 ```sh
-pip install https://github.com/spacerockzero/dupecheck/archive/v0.5.3.zip
+pip install dupecheck
 ```
 
 ```python
