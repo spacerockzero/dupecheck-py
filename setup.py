@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="dupecheck",
-    version="0.7.0",
+    version="0.7.1",
     long_description=README,
     long_description_content_type="text/markdown",
     author="Jakob Anderson",
