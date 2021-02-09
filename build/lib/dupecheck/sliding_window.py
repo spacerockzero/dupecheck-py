@@ -54,5 +54,5 @@ def dupecheck(min=DEFAULT_MIN, max=DEFAULT_MAX, text=None, dataset=None, verbose
         res = run(i, text, dataset)
         if len(res) > 0:
             matches.update(res)
-    matchs = sorted(matches, key=len)
+    matches = sorted(matches, key=len)
     return matches

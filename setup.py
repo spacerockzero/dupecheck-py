@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="dupecheck",
-    version="0.6.4",
+    version="0.7.0",
     long_description=README,
     long_description_content_type="text/markdown",
     author="Jakob Anderson",
@@ -19,8 +19,8 @@ setup(
     description="Check for duplicate word series between generated text and a dataset",
     packages=find_packages(exclude=["tests"]),
     include_package_data=True,
-    install_requires=["tqdm"],
+    install_requires=["tqdm", "nltk", "autocorrect"],
     setup_requires=["pytest-runner"],
-    tests_require=["pytest==4.4.1", "numpy"],
+    tests_require=["pytest==4.4.1", "numpy", "nltk", "autocorrect"],
     test_suite="tests",
 )
