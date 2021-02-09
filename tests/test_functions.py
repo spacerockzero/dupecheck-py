@@ -1,4 +1,4 @@
-from lib import chunks, sliding_window
+from dupecheck import chunks, sliding_window, sliding_window2
 from tests import generated as mocks
 import os
 import numpy as np
@@ -40,6 +40,7 @@ def dupecheck_found(text, expected, data):
     # assert duplicates[0] == text
 
 
+# sliding window 1 method
 def sliding_window_run(window_length, text, expected, data):
     duplicates = sliding_window.run(window_length, text, data)
     assert len(duplicates) > 0
@@ -91,3 +92,15 @@ def test_sw_dupecheck_series5():
 
 def test_sw_dupecheck_series6():
     sw_dupecheck(6, mocks.duplicate_series6, mocks.duplicate_series6_common, dataset)
+
+
+# sliding window 2 method
+
+
+def sw2_run(window_length, text, expected, dataset):
+    duplicates = sliding_window2.run(window_length, text, dataset)
+    assert duplicates["count"] > 0
+
+
+def test_sw2_run_series3():
+    sw2_run(3, mocks.duplicate_series3, mocks.duplicate_series3_common, dataset)
