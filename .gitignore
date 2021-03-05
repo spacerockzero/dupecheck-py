@@ -3,6 +3,6 @@
 __pycache__/
 dupecheck.egg-info/
 .eggs
-# dist/
+dist/
 # build/
-venv
+# venv
